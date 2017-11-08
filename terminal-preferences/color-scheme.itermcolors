@@ -301,6 +301,19 @@
 		<key>Red Component</key>
 		<real>0.81176471710205078</real>
 	</dict>
+	<key>Background Color</key>
+	<dict>
+		<key>Alpha Component</key>
+		<real>0.8</real>
+		<key>Blue Component</key>
+		<real></real>
+		<key>Color Space</key>
+		<string>Calibrated</string>
+		<key>Green Component</key>
+		<real></real>
+		<key>Red Component</key>
+		<real></real>
+	</dict>
 	<key>Link Color</key>
 	<dict>
 		<key>Alpha Component</key>

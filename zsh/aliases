@@ -1,6 +1,6 @@
-alias edit="atom"
-alias vi="emacs"
-alias vim="emacs"
+alias edit="code"
+alias vi="vim"
+alias vim="vim"
 
 alias s="cd .."
 alias findg="find . -type f -print0 | xargs -0 grep -Ini --color=auto"
@@ -44,3 +44,5 @@ alias okgulp="gulp watch --reload"
 
 alias ee="exit"
 alias qq="exit"
+
+alias care="care_bot"

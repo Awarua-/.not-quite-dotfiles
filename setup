@@ -15,10 +15,26 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 echo "⛑  setting up node..."
-nvm install node
+nvm install --lts
+nvm use --lts
 
+<<<<<<< HEAD
 # run npm things
 echo "⛑  npm installing some stuff..."
 npm install -g bower
 npm install -g polymer-cli
 npm install -g diff-so-fancy
+=======
+echo "⛑  updating npm to the latest and greatest..."
+npm -g install npm@latest
+
+echo "⛑  installing yarn"
+brew install yarn
+
+echo "⛑  log in to the npm repo"
+echo "⚠️ ⚠️ 👇 you will need to enter your staffId credentials"
+npm login --registry=https://npm-private.atlassian.io --scope=atlassian
+
+echo "⛑  install micros-cli"
+npm install -g @atlassian/micros-cli
+>>>>>>> add own custom config

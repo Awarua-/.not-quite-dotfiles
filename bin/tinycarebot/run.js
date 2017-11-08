@@ -12,13 +12,13 @@ ACCESS_TOKEN='...'
 ACCESS_TOKEN_SECRET='...'
 (where the dots are your actual values)
 */
-env(__dirname + '/.env');
+// env(__dirname + '/.env');
 
 var T = new Twit({
-  consumer_key:process.env.CONSUMER_KEY,
-  consumer_secret:process.env.CONSUMER_SECRET,
-  access_token:process.env.ACCESS_TOKEN,
-  access_token_secret:process.env.ACCESS_TOKEN_SECRET,
+  consumer_key:process.env.TTC_CONSUMER_KEY,
+  consumer_secret:process.env.TTC_CONSUMER_SECRET,
+  access_token:process.env.TTC_ACCESS_TOKEN,
+  access_token_secret:process.env.TTC_ACCESS_TOKEN_SECRET,
   timeout_ms:           60*1000,  // optional HTTP request timeout to apply to all requests.
 });
 
