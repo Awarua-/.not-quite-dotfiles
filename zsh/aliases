@@ -44,5 +44,6 @@ alias okgulp="gulp watch --reload"
 
 alias ee="exit"
 alias qq="exit"
+alias tct="tiny-care-terminal"
 
 alias care="care_bot"
