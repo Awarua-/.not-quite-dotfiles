@@ -28,8 +28,14 @@ npm install -g diff-so-fancy
 echo "⛑  updating npm to the latest and greatest..."
 npm -g install npm@latest
 
+echo "⛑  update brew"
+brew update
+
 echo "⛑  installing yarn"
 brew install yarn
+
+echo "⛑  installing python"
+brew install pyenv pyenv-virtualenv
 
 echo "⛑  log in to the npm repo"
 echo "⚠️ ⚠️ 👇 you will need to enter your staffId credentials"
