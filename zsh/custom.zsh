@@ -27,6 +27,8 @@ source $HOME/.not-quite-dotfiles/zsh/prompt
 source $HOME/.not-quite-dotfiles/zsh/aliases
 source $HOME/.not-quite-dotfiles/zsh/chrome
 
+source $HOME/.not-quite-dotfiles/tmux/mux.sh
+
 export PATH="/usr/local/git/current/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin"
 
 export NVM_DIR="/Users/noms/.nvm"
