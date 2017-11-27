@@ -18,15 +18,12 @@ echo "⛑  setting up node..."
 nvm install --lts
 nvm use --lts
 
-<<<<<<< HEAD
-# run npm things
-echo "⛑  npm installing some stuff..."
-npm install -g bower
-npm install -g polymer-cli
-npm install -g diff-so-fancy
-=======
 echo "⛑  updating npm to the latest and greatest..."
 sudo npm -g install npm@latest
+
+# run npm things
+echo "⛑  npm installing some stuff..."
+npm install -g diff-so-fancy
 
 echo "⛑  update brew"
 brew update
@@ -42,10 +39,5 @@ echo "⚠️ ⚠️ 👇 you will need to enter your staffId credentials"
 npm login --registry=https://npm-private.atlassian.io --scope=atlassian
 
 echo "⛑  install micros-cli"
-<<<<<<< HEAD
-npm install -g @atlassian/micros-cli
->>>>>>> add own custom config
-=======
 brew tap atlassian/micros ssh://git@stash.atlassian.com:7997/micros/micros-cli-homebrew-tap.git
 brew install micros-cli
->>>>>>> update to include tmux config
