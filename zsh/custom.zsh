@@ -10,7 +10,7 @@ export TTC_WEATHER='Sydney'
 export TCC_SAY_BOX='panda'
 
 # go stuff
-export GOPATH=/Users/dwoolley/dev
+export GOPATH=/Users/dwoolley/go
 
 # the secret-keys.zsh file contains these vars:
 # export TTC_CONSUMER_KEY="..."

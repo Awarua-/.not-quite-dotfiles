@@ -49,3 +49,5 @@ echo "Go go gadget"
 brew install go
 brew install dep
 
+mkdir -p ~/go/src
+
