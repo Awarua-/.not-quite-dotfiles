@@ -9,6 +9,9 @@ export TTC_GITBOT='gitlog'
 export TTC_WEATHER='Sydney'
 export TCC_SAY_BOX='panda'
 
+# go stuff
+export GOPATH=/Users/dwoolley/dev
+
 # the secret-keys.zsh file contains these vars:
 # export TTC_CONSUMER_KEY="..."
 # export TTC_CONSUMER_SECRET="..."
@@ -29,7 +32,7 @@ source $HOME/.not-quite-dotfiles/zsh/chrome
 
 source $HOME/.not-quite-dotfiles/tmux/mux.sh
 
-export PATH="/usr/local/git/current/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin"
+export PATH="/usr/local/git/current/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:$(go env GOPATH)/bin"
 
 export NVM_DIR="/Users/noms/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
