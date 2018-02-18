@@ -7,8 +7,10 @@ set -e
 
 # gitconfig
 echo "🍰  updating gitconfig..."
+mkdir -p ~/.git-scripts/hooks
 cp ./git/.gitconfig ~/.gitconfig
-cp ./git/squash.sh ~/.squash.sh
+cp ./git/squash.sh ~/.git-scripts/squash.sh
+cp ./git/hooks/* ~/.git-scripts/hooks/
 git config --global credential.helper osxkeychain
 
 # find the installers and run them iteratively
