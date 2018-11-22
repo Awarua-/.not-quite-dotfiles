@@ -10,6 +10,7 @@ echo "🍰  updating gitconfig..."
 mkdir -p ~/.git-scripts/hooks
 cp ./git/.gitconfig ~/.gitconfig
 cp ./git/squash.sh ~/.git-scripts/squash.sh
+cp ./git/copy-untracked.sh ~/.git-scripts/copy-untracked.sh
 cp ./git/hooks/* ~/.git-scripts/hooks/
 git config --global credential.helper osxkeychain
 

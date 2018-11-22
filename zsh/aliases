@@ -35,6 +35,7 @@ alias gbr="git checkout -b"
 alias gba="git branch -a"
 alias squish="git commit -a --amend -C HEAD"
 alias squash="~/.git-scripts/squash.sh \$1 \$2"
+alias jbr="~/.git-scripts/copy-untracked.sh \$1 \$2"
 
 # github
 alias gpages="git push origin master:gh-pages"

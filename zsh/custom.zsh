@@ -1,6 +1,9 @@
 ZSH_THEME="no-theme"
 ENABLE_CORRECTION="true"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
+NIX_INSTALLER_NO_MODIFY_PROFILE="true"
+
+plugins=(git gitfast git-extras nix nix-shell aws brew dirhistory dircycle gpg-agent history jira last-working-dir npm osx yarn tmux python)
 
 # for tiny-care-terminal
 export TTC_REPOS="~/dev","~/.not-quite-dotfiles"
@@ -25,6 +28,8 @@ fi
 export LANG=en_AU.UTF-8
 export LC_ALL=en_AU.UTF-8
 
+setopt HIST_IGNORE_SPACE
+
 source $ZSH/oh-my-zsh.sh
 source $HOME/.not-quite-dotfiles/zsh/prompt
 source $HOME/.not-quite-dotfiles/zsh/aliases
@@ -32,7 +37,9 @@ source $HOME/.not-quite-dotfiles/zsh/chrome
 
 source $HOME/.not-quite-dotfiles/tmux/mux.sh
 
-export PATH="/usr/local/git/current/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:$(go env GOPATH)/bin"
+export PATH="/usr/local/git/current/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:$(go env GOPATH)/bin:/usr/local/opt/postgresql@9.5/bin:$HOME/.jenv/bin:/nix/var/nix/profiles/default/bin"
+
+eval "$(jenv init -)"
 
 export NVM_DIR="/Users/dwoolley/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -41,6 +48,10 @@ export NVM_DIR="/Users/dwoolley/.nvm"
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
   eval "$(pyenv virtualenv-init -)"
+fi
+
+if [[ -f /Users/dwoolley/.pyenv/versions/3.6.3/share/cloudtoken/shell_additions/bashrc_additions ]]; then
+    source /Users/dwoolley/.pyenv/versions/3.6.3/share/cloudtoken/shell_additions/bashrc_additions
 fi
 
 
