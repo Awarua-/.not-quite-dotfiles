@@ -16,8 +16,8 @@ git_dirty() {
   command git rev-parse --is-inside-work-tree &>/dev/null || return
   # check if it's dirty
   # using these emoji make multi line commands be broken and appear on one line. shrug.
-  #command git diff --quiet --ignore-submodules HEAD &>/dev/null; [ $? -eq 1 ] && echo '☔️' || echo '☀️'
-  command git diff --quiet --ignore-submodules HEAD &>/dev/null; [ $? -eq 1 ] && echo '⛈' || echo '🌞'
+  command git diff --quiet --ignore-submodules HEAD &>/dev/null; [ $? -eq 1 ] && echo '☔️' || echo '☀️'
+  # command git diff --quiet --ignore-submodules HEAD &>/dev/null; [ $? -eq 1 ] && echo '⛈' || echo '🌞'
 }
 
 # If it's a git repo, add the git prompt
@@ -41,16 +41,16 @@ git_prompt_go() {
 # %m => shortname host
 # %(?..) => prompt conditional - %(condition.true.false)
 
-read -d '' SILLY_BIT << EOF
-❣⃛(❛ั◡˜๑)♥ྉ
-EOF
+# read -d '' SILLY_BIT << EOF
+# ❣⃛(❛ั◡˜๑)♥ྉ
+# EOF
 
 battery_status() {
   ~/.not-quite-dotfiles/bin/battery-status
 }
 
 # This prompt works in oh-my-zsh because of git_prompt_info magic. See below for regular zsh.
-PROMPT='$(battery_status) %F{red}$(echo "$SILLY_BIT")%F{green}%~%F{blue}`git_prompt_go`%f%F{red} ❥ %f'
+PROMPT='$(battery_status) %F{green}%~%F{blue}`git_prompt_go`%f%F{red} ❥ %f'
 
 # the btford prompt for regular zshs. Uncomment away.
 #autoload -Uz vcs_info

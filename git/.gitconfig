@@ -3,10 +3,16 @@
 [credential]
 	helper = osxkeychain
 [user]
-	name = Dion Woolley
-	email = dwoolley@atlassian.com
+        signingkey = 747796B4EAE6F904FB5FD7137CD68FB82A1038E9
+        name = Dion Woolley
+        email = dwoolley@atlassian.com
+[commit]
+        gpgsign = true
+[diff]
+        patience = true
+        renameLimit = -1
 [url "https://github"]
-	insteadOf = git://github
+        insteadOf = git://github
 [color]
         diff = auto
         status = auto
@@ -15,7 +21,7 @@
 [core]
         excludesfile = ~/.gitignore
         editor = vim
-	pager = diff-so-fancy | less --tabs=4 -RFX
+        pager = diff-so-fancy | less --tabs=4 -RFX
         hooksPath = ~/.git-scripts/hooks
 [help]
         autocorrect = 1

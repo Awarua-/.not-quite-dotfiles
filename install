@@ -34,6 +34,3 @@ echo "🍰  getting xcode dev tools..."
 if ! xcode-select -p; then
   xcode-select --install
 fi
-
-echo "🍰  doing a ruby dance..."
-sudo gem install jekyll
