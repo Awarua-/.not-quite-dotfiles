@@ -26,7 +26,7 @@ source $HOME/.not-quite-dotfiles/zsh/aliases
 
 source $HOME/.not-quite-dotfiles/tmux/mux.sh
 
-export PATH="/usr/local/opt/curl-openssl/bin:/usr/local/git/current/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:$(go env GOPATH)/bin:/usr/local/opt/postgresql@9.5/bin:$HOME/.jenv/bin:/nix/var/nix/profiles/default/bin:/opt/local/bin"
+export PATH="/usr/local/opt/curl-openssl/bin:/usr/local/git/current/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:$(go env GOPATH)/bin:/usr/local/opt/postgresql@9.5/bin:$HOME/.jenv/bin:/nix/var/nix/profiles/default/bin:/opt/local/bin:$HOME/.cargo/bin"
 
 eval "$(jenv init -)"
 
@@ -47,11 +47,15 @@ export PYCURL_SSL_LIBRARY=openssl
 # For pkg-config to find zlib you may need to set:
 export PKG_CONFIG_PATH="${PKG_CONFIG_PATH} /usr/local/opt/zlib/lib/pkgconfig /usr/local/opt/curl-openssl/lib/pkgconfig"
 
-if [[ -f "${HOME}/.config/cloudtoken/bashrc_additions" ]]; then
-    source "${HOME}/.config/cloudtoken/bashrc_additions"
-fi
+# if [[ -f "${HOME}/.config/cloudtoken/bashrc_additions" ]]; then
+#     source "${HOME}/.config/cloudtoken/bashrc_additions"
+# fi
 
-SHELL_SESSION_HISTORY=0
+# Write the completion script to somewhere in your $fpath
+atlas --completion-script-zsh > ~/.zsh_functions/_atlas
+
+# Ensure compinit is loaded
+autoload -U compinit && compinit
 
 # care_bot() {
 #   node ~/.not-quite-dotfiles/bin/tinycarebot/run.js

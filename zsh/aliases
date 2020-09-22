@@ -53,3 +53,8 @@ alias qq="exit"
 alias tct="tiny-care-terminal"
 
 alias care="care_bot"
+
+# docker
+alias ds="docker stop $(docker ps -a -q)"
+alias dr="docker rm $(docker ps -a -q)"
+alias dsr="docker stop $(docker ps -a -q) || docker rm $(docker ps -a -q)"
