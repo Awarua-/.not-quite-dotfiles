@@ -3,7 +3,6 @@
 ## Apps to install
 
 - [ ] [Alfred](https://www.alfredapp.com/). Don't forget to disable Spotlight
-- [ ] [Atom](https://atom.io)
 - [ ] [Slack](https://slack.com)
 
 

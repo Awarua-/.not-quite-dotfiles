@@ -37,13 +37,6 @@ brew install yarn
 echo "⛑  installing python"
 brew install pyenv pyenv-virtualenv
 
-echo "⛑  log in to the npm repo"
-echo "⚠️ ⚠️ 👇 you will need to enter your staffId credentials"
-npm login --registry=https://npm-private.atlassian.io --scope=atlassian
-
-echo "⛑  install micros-cli"
-brew tap atlassian/micros ssh://git@stash.atlassian.com:7997/micros/micros-cli-homebrew-tap.git
-brew install micros-cli
 
 echo "Go go gadget"
 brew install go

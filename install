@@ -22,7 +22,7 @@ realpath() {
 for src in $(find -H . -maxdepth 4 -name install.sh | sed 's|/[^/]*$||')
 do
   (
-  file=`realpath $src`
+  file=$(realpath "$src")
   echo "⛑  installing $file..."
   cd $file
   sh install.sh
