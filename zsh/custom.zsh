@@ -21,7 +21,7 @@ source $ZSH/oh-my-zsh.sh
   source $HOME/.not-quite-dotfiles/tmux/mux.sh
 }
 
-export PATH="/usr/local/opt/curl-openssl/bin:/usr/local/git/current/bin:/usr/bin:/bin:/usr/local/bin:/usr/local/sbin:/usr/sbin:/sbin:$(go env GOPATH)/bin:/usr/local/opt/postgresql@9.5/bin:$HOME/.jenv/bin:/nix/var/nix/profiles/default/bin:/opt/local/bin:$HOME/.cargo/bin:/usr/X11/bin"
+export PATH="$(pyenv root)/shims:/usr/local/opt/curl-openssl/bin:/usr/local/git/current/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:$(go env GOPATH)/bin:/usr/local/opt/postgresql@9.5/bin:$HOME/.jenv/bin:/nix/var/nix/profiles/default/bin:/opt/local/bin:$HOME/.cargo/bin:/usr/X11/bin"
 
 () {
   eval "$(jenv init -)"
